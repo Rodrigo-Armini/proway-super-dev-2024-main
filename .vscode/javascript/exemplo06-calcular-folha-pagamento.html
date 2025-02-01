@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="exemplo06-calcular-folha-pagamento.css">
+</head>
+
+<body>
+    <div>
+        <label for="campo-nome">Nome</label>
+        <input type="text" id="campo-nome" required minlength="10" maxlength="60">
+    </div>
+
+    <div>
+        <label for="campo-cargo">Cargo</label>
+        <select id="campo-cargo">
+            <option value="" disabled selected>Selecione uma opção</option>
+            <option value="Assistente">Assistente</option>
+            <option value="Junior">Junior</option>
+            <option value="Pleno">Pleno</option>
+            <option value="Senior">Senior</option>
+        </select>
+    </div>
+
+    <div>
+        <label for="campo-matricula">Matricula</label>
+        <input type="number" id="campo-matricula">
+    </div>
+
+    <div>
+        <label for="campo-mes-referencia">Mês Referência</label>
+        <select id="campo-mes-referencia">
+            <option value="janeiro">Janeiro</option>
+            <option value="fevereiro">Fevereiro</option>
+            <option value="marco">Março</option>
+            <option value="abril">Abril</option>
+            <option value="maio">Maio</option>
+            <option value="junho">Junho</option>
+            <option value="julho">Julho</option>
+            <option value="agosto">Agosto</option>
+            <option value="setembro">Setembro</option>
+            <option value="outubro">Outubro</option>
+            <option value="novembro">Novembro</option>
+            <option value="dezembro">Dezembro</option>
+        </select>
+    </div>
+
+    <div>
+        <label for="campo-ano-referencia">Ano Referência</label>
+        <select id="campo-ano-referencia">
+            <option value="2024">2024</option>
+            <option value="2025">2025</option>
+        </select>
+    </div>
+
+    <div>
+        <span>Modalidade</span>
+        <input type="radio" id="campo-modalidade-horista" name="modalidade" value="horista"
+            onchange="apresentarDivModalidade()">
+        <label for="campo-modalidade-horista">Horista</label>
+        <input type="radio" id="campo-modalidade-mensalista" name="modalidade" value="mensalista"
+            onchange="apresentarDivModalidade()">
+        <label for="campo-modalidade-mensalista">Mensalista</label>
+    </div>
+
+    <div id="modalidade-horista" class="ocultar">
+        <div>
+            <span for="campo-valor-hora">Valor Hora</span>
+            <span id="campo-valor-hora-value">R$ 0,00</span>
+        </div>
+
+        <div>
+            <label for="campo-quantidade-horas">Quantidade horas</label>
+            <input type="number" id="campo-quantidade-horas" min="1" max="300">
+        </div>
+    </div>
+
+    <div id="modalidade-mensalista" class="ocultar">
+        <div>
+            <span id="campo-salario-base">Salário Base</span>
+            <span id="campo-salario-base-value">R$ 0,00</span>
+        </div>
+        <div>
+            <span>Benefícios</span>
+            <div>
+                <span>Plano de Saúde</span>
+                <div>
+                    <input type="radio" id="campo-plano-saude-sem" name="campo-plano-saude"
+                    value="sem">
+                    <label for="campo-plano-saude-sem">Sem</label>
+                </div>
+                <div>
+                    <input type="radio" id="campo-plano-saude-basico" name="campo-plano-saude"
+                    value="bacico">
+                    <label for="campo-plano-saude-basico">Básico</label>
+                </div>
+                <div>
+                    <input type="radio" id="campo-plano-saude-medio" name="campo-plano-saude"
+                    value="medio">
+                    <label for="campo-plano-saude-medio">Médio</label>
+                </div>
+                <div>
+                    <input type="radio" id="campo-plano-saude-completo" name="campo-plano-saude"
+                    value="completo">
+                    <label for="campo-plano-saude-completo">Completo</label>
+                </div>
+                <span>Plano odontológico</span>
+                <div>
+                    <input type="radio" id="campo-plano-odontologico-nao" name="campo-plano-odontologico" 
+                    value="nao">
+                    <label for="campo-plano-ondotologico">Não</label>
+                </div>
+                <div>
+                    <input type="radio" id="campo-plano-odontologico-sim" name="campo-plano-odontologico" 
+                    value="sim">
+                    <label for="campo-plano-odontologico-sim">Sim</label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button onclick="calcular"
+
+    <script src="exemplo06-calcular-folha-pagamento.js"></script>
+</body>
+
+</html>

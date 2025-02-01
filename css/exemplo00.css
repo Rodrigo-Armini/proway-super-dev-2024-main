@@ -1,0 +1,117 @@
+body {
+    /* background-color: black; */
+    /* rgb => red, green, blue (0..255, 0..255, 0..255) */
+    background-color: rgb(30, 30, 47);
+    color: white;
+    /* Alterar a fonte das tags para Arial, caso não encontrar Arial,
+    aplicará Helvetica e assim por diante */
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Seletor Universal */
+* {
+    box-sizing: border-box;
+}
+
+/* Seletor de tipo */
+h1 {
+    /* Pode definir cor com hexadecimal */
+    color: #f39c12;
+}
+
+/* Seletor de ID é #, ou seja, a tag que contém o id="importante" */
+#importante {
+    text-decoration: underline;
+    color: #3498db;
+}
+
+/* Seletor de classe é o '.', ou seja, a tag que contém class="destaque" */
+.destaque {
+    color: #e74c3c;
+    font-weight: bold;
+    /* definir o texto como negrito */
+}
+
+/* Seletor de descendente */
+div p {
+    /* Será alterado a cor do texto da tag p que é filha da tag div */
+    color: #9d59b6;
+}
+
+/* Seletor de filho direto */
+/* Será estilizado somente os li(s) que forem filhos de ul */
+ul>li {
+    color: #8e44ad;
+}
+
+/* Seletor de adjacente */
+h2+p {
+    font-style: italic;
+    color: #0cdcb2;
+}
+
+/* Seletor de irmão geral */
+h2~p {
+    color: #d35400;
+}
+
+/* Seletor de atributo */
+input [type="digite algo aqui"] {
+    border: 2px solid #34495e;
+    padding: 5px;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+}
+
+input [type="password"] {
+    border: 2px dashed #e74c3c;
+    padding: 10px;
+    background-color: #1e272e;
+    color: #f5f5f5;
+    border-radius: 10px;
+    font-style: italic;
+}
+
+/* Seletor de grupo */
+h1,
+h2 {
+    margin: 20px 0;
+    border-bottom: 1px solid #444;
+    padding-bottom: 5px;
+}
+
+/* Pseudo-classes */
+a {
+    color: #1abc9c;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #f39c12;
+}
+
+li:nth-child(odd) {
+    background-color: #34495e;
+}
+
+li:nth-child(even) {
+    background-color: #2c3e50;
+}
+
+li {
+    padding: 5px;
+}
+
+/* Pseudo-elementos */
+p::first-line {
+    font-weight: bold;
+}
+
+p::after {
+    content: "[Fim do parágrafo]";
+
+/* Define a cor do texto do pseudo-elemento */
+color: #7f8c8d;
+}
