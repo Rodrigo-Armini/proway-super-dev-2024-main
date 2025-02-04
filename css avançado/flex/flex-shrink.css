@@ -18,6 +18,28 @@ main {
     /* Tamanho inicial de cada item */
 }
 
+@media(max-width: 680px){
+    main{
+        width: 400px;
+    }
+
+    .item{
+        flex-basis: 150px;
+    }
+}
+
+@media (max-width: 400px){
+    main{
+        width: 200px;
+        gap: 8px;
+    }
+    .item{
+        flex-basis: 50px;
+        padding: 5px;
+        margin: 0px;
+    }
+}
+
 /* Valores distintos de flex-shrink */
 .item-1 {
     flex-shrink: 1;
